@@ -51,3 +51,12 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
     * Encapsulamiento de cada seccion (`#inicio`, `#sobre-mi`, `#habilidades`, `#proyectos`, `#contacto`) dentro de recuadros independientes (`section-box`) con borde azul.
     * Reduccion y estandarizacion del tamano de la fotografia de perfil (`220px x 220px`) y de las vistas previas de proyectos (`145px` de alto) alineados uno al lado del otro.
     * Incorporacion de reglas CSS nativas internas en `<style>` para garantizar la cuadricula y organizacion visual sin depender exclusivamente de la carga externa del CDN.
+
+11. **Refinamiento de botones, pildoras de correo y campos de formulario (Fase visual 7):**
+    * Estandarizacion de botones principales (`glow-button`) y secundarios (`outline-button`) con relleno interno, bordes redondeados y separacion uniforme (`hero-actions` y `project-actions`).
+    * Diseno personalizado en forma de pildora oscura (`email-pill`) para los botones de copia de correo (`salgadofrancisco920@gmail.com`), eliminando estilos nativos por defecto del navegador.
+    * Estructuracion de los controles del formulario (`form-control`, `form-row` y `form-group`) con fondo oscuro (`#050811`), bordes azules y alineacion responsiva en dos columnas.
+    ----
+
+ 
+ **Roma caera pero no caeremos con Roma.**
