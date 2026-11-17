@@ -36,9 +36,6 @@
             transform: translateY(-2px);
             box-shadow: 0 0 28px rgba(37, 99, 235, 0.45);
         }
-        .hero-glow {
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.28), transparent 70%);
-        }
     </style>
 </head>
 <body class="text-white antialiased selection:bg-blue-700 selection:text-white">
@@ -115,61 +112,77 @@
             </div>
         </section>
 
-        <section id="sobre-mi">
-            <p>01 / SOBRE MÍ</p>
-            <h2>Un joven apasionado por el código.</h2>
-            <p>
-                Soy Francisco, un chico sencillo, muy creativo y con buen sentido del humor. Estoy en pleno proceso de convertirme en desarrollador de software en Riwi. Me mueve entender cómo funcionan las cosas por dentro y transformar ideas en proyectos reales que sirvan de verdad.
-            </p>
-            <p>
-                No le corro a los retos: me gusta untarme de lógica, estructura web, terminal y buenas prácticas para que cada entrega quede bien hecha y con toda la actitud. ¡Sisabe y eso que esto apenas comienza!
-            </p>
+        <section id="sobre-mi" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
+            <div class="grid md:grid-cols-12 gap-10 items-start">
+                <div class="md:col-span-7">
+                    <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">01 / SOBRE MÍ</p>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mb-6">
+                        Un joven apasionado por el <span class="gradient-text">código.</span>
+                    </h2>
+                    <div class="space-y-4 text-gray-300 text-base leading-relaxed">
+                        <p>
+                            Soy Francisco, un chico sencillo, muy creativo y con buen sentido del humor. Estoy en pleno proceso de convertirme en desarrollador de software en <span class="text-white font-semibold">Riwi</span>. Me mueve entender cómo funcionan las cosas por dentro y transformar ideas en proyectos reales que sirvan de verdad.
+                        </p>
+                        <p>
+                            No le corro a los retos: me gusta untarme de lógica, estructura web, terminal y buenas prácticas para que cada entrega quede bien hecha y con toda la actitud. ¡Sisabe y eso que esto apenas comienza!
+                        </p>
+                    </div>
+                </div>
 
-            <article>
-                <span>Formación Actual · 2026</span>
-                <h3>Desarrollo de Software</h3>
-                <p>Riwi — Centro de Entrenamiento</p>
-                <p>
-                    Entrenamiento intensivo basado en proyectos reales: lógica de programación, desarrollo web, control de versiones con Git y trabajo en equipo bajo presión.
-                </p>
-            </article>
+                <div class="md:col-span-5 space-y-4">
+                    <article class="blue-card blue-border rounded-xl p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold tracking-wider text-blue-400 uppercase">Formación Actual</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-800/50">2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Desarrollo de Software</h3>
+                        <p class="text-sm text-blue-300 font-medium mt-1">Riwi — Centro de Entrenamiento</p>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Entrenamiento intensivo basado en proyectos reales: lógica de programación, desarrollo web, control de versiones con Git y trabajo en equipo bajo presión.
+                        </p>
+                    </article>
 
-            <article>
-                <span>Mentalidad</span>
-                <h3>Código limpio y soluciones reales</h3>
-                <p>
-                    Me enfoco en escribir código ordenado, entendible y adaptable a cualquier pantalla, cuidando tanto la lógica como la experiencia de quien usa la plataforma.
-                </p>
-            </article>
+                    <article class="blue-card blue-border rounded-xl p-6">
+                        <span class="text-xs font-bold tracking-wider text-blue-400 uppercase">Mentalidad</span>
+                        <h3 class="text-lg font-bold text-white mt-2">Código limpio y soluciones reales</h3>
+                        <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                            Me enfoco en escribir código ordenado, entendible y adaptable a cualquier pantalla, cuidando tanto la lógica como la experiencia de quien usa la plataforma.
+                        </p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="habilidades">
-            <p>02 / TECNOLOGÍAS</p>
-            <h2>Mi caja de herramientas.</h2>
-            <ul>
-                <li>
-                    <h3>HTML5</h3>
-                    <p>Estructura semántica</p>
+        <section id="habilidades" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
+            <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">02 / TECNOLOGÍAS</p>
+            <h2 class="text-3xl sm:text-4xl font-black text-white mb-10">
+                Mi caja de <span class="gradient-text">herramientas.</span>
+            </h2>
+
+            <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">HTML5</h3>
+                    <p class="text-gray-400 text-xs mt-1">Estructura semántica</p>
                 </li>
-                <li>
-                    <h3>CSS3</h3>
-                    <p>Diseño y layouts</p>
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">CSS3</h3>
+                    <p class="text-gray-400 text-xs mt-1">Diseño y layouts</p>
                 </li>
-                <li>
-                    <h3>Tailwind</h3>
-                    <p>Estilos ágiles y modernos</p>
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">Tailwind</h3>
+                    <p class="text-gray-400 text-xs mt-1">Estilos ágiles y modernos</p>
                 </li>
-                <li>
-                    <h3>JavaScript</h3>
-                    <p>Lógica e interactividad</p>
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">JavaScript</h3>
+                    <p class="text-gray-400 text-xs mt-1">Lógica e interactividad</p>
                 </li>
-                <li>
-                    <h3>Git & GitHub</h3>
-                    <p>Control de versiones</p>
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">Git & GitHub</h3>
+                    <p class="text-gray-400 text-xs mt-1">Control de versiones</p>
                 </li>
-                <li>
-                    <h3>Linux</h3>
-                    <p>Terminal y entorno</p>
+                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                    <h3 class="font-bold text-base text-white">Linux</h3>
+                    <p class="text-gray-400 text-xs mt-1">Terminal y entorno</p>
                 </li>
             </ul>
         </section>

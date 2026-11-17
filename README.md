@@ -32,15 +32,8 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
    * Estilizado del distintivo de estado en Riwi, titulo principal con degradado azul, botones de accion (`Ver proyectos` y `Conocer mas`) y enlaces rapidos a GitHub y correo.
    * Incorporacion de tarjeta contenedora limpia (`blue-card` y `blue-border`) para la fotografia de perfil y lema personal.
 
+7. **Diseno de las secciones Sobre mi y Habilidades (Fase visual 3):**
+   * Estructuracion de `#sobre-mi` en dos columnas (`grid md:grid-cols-12`), combinando la biografia personal a la izquierda con tarjetas informativas de formacion actual en Riwi (2026) y mentalidad de desarrollo a la derecha.
+   * Organizacion de `#habilidades` mediante una cuadricula responsiva (`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6`) con tarjetas limpias para cada tecnologia y efecto de resaltado en el borde al pasar el cursor.
+
 ---
-
-## Estructura de archivos
-
-```text
-portafolio/
-├── img/
-│   ├── Fotodelballer.jpeg
-│   ├── ruedarueda.png
-│   └── sismo.png
-├── index.html
-└── README.md
