@@ -27,6 +27,11 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
    * Definicion de la paleta de colores oscura con tonos azules (`#050811` para el fondo principal, `#0A1124` para tarjetas y degradados en azul cielo, azul rey y azul marino).
    * Estilizado de la barra de navegacion fija (`header`) con efecto desenfoque (`backdrop-blur`), enlaces de navegacion responsivos y boton principal con brillo azul.
 
+6. **Diseno de la seccion Hero / Presentacion (Fase visual 2):**
+   * Organizacion en dos columnas responsivas (`grid md:grid-cols-2`) con separacion estructural respecto al resto del contenido.
+   * Estilizado del distintivo de estado en Riwi, titulo principal con degradado azul, botones de accion (`Ver proyectos` y `Conocer mas`) y enlaces rapidos a GitHub y correo.
+   * Incorporacion de tarjeta contenedora limpia (`blue-card` y `blue-border`) para la fotografia de perfil y lema personal.
+
 ---
 
 ## Estructura de archivos
