@@ -9,44 +9,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background:
-                radial-gradient(ellipse at 80% 10%, rgba(29, 78, 216, 0.22), transparent 40%),
-                radial-gradient(ellipse at 10% 60%, rgba(30, 58, 138, 0.20), transparent 40%),
-                #050811;
+            background-color: #050811;
+            color: #ffffff;
+            margin: 0;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         .gradient-text {
-            background: linear-gradient(90deg, #60A5FA, #2563EB, #1E40AF);
+            background: linear-gradient(90deg, #60A5FA, #3B82F6, #2563EB);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        .blue-border {
-            border: 1px solid rgba(59, 130, 246, 0.28);
-        }
-        .blue-card {
+        .section-box {
             background-color: #0A1124;
+            border: 1px solid rgba(59, 130, 246, 0.32);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .inner-card {
+            background-color: #070C1B;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 1rem;
+            padding: 1.25rem;
         }
         .glow-button {
-            background: linear-gradient(100deg, #2563EB, #1D4ED8, #1E3A8A);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            background: linear-gradient(100deg, #2563EB, #1D4ED8);
+            color: #ffffff;
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .glow-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 28px rgba(37, 99, 235, 0.45);
+            box-shadow: 0 4px 18px rgba(37, 99, 235, 0.45);
+        }
+        .outline-button {
+            display: inline-block;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(59, 130, 246, 0.5);
+        }
+        .outline-button:hover {
+            border-color: #60A5FA;
+        }
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(5, 8, 17, 0.95);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.6);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .profile-thumb {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 0.85rem;
+            display: block;
+            margin: 0 auto 0.75rem auto;
+        }
+        .project-thumb {
+            width: 100%;
+            height: 145px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 0.75rem;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(30, 58, 138, 0.5);
+        }
+        @media (max-width: 768px) {
+            .hero-grid, .about-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
-<body class="text-white antialiased selection:bg-blue-700 selection:text-white">
+<body class="bg-[#050811] text-white antialiased">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#050811]/85 backdrop-blur-xl border-b border-blue-950/60">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="nav-bar">
+        <nav class="nav-inner">
             <a href="#inicio" class="text-2xl font-black tracking-tight text-white">
                 Francisco<span class="gradient-text">.dev</span>
             </a>
 
-            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+            <ul class="nav-links text-sm font-medium text-white">
                 <li><a href="#inicio" class="hover:text-blue-400 transition">Inicio</a></li>
                 <li><a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre mí</a></li>
                 <li><a href="#habilidades" class="hover:text-blue-400 transition">Habilidades</a></li>
@@ -54,72 +160,72 @@
                 <li><a href="#contacto" class="hover:text-blue-400 transition">Contacto</a></li>
             </ul>
 
-            <a href="#contacto" class="glow-button px-5 py-2.5 rounded-full text-sm font-bold text-white">
+            <a href="#contacto" class="glow-button px-5 py-2 rounded-full text-sm font-bold text-white">
                 Hablemos ↗
             </a>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="max-w-7xl mx-auto px-6 pt-32 pb-20 grid md:grid-cols-2 gap-12 items-center border-b border-blue-950/50">
-            <div>
-                <span class="inline-block px-3.5 py-1.5 rounded-full border border-blue-500/40 bg-blue-950/40 text-blue-400 text-xs font-bold tracking-wider mb-6">
-                    EN PROCESO DE SER DESARROLLADOR · RIWI
-                </span>
+    <main class="main-container">
+        <section id="inicio" class="section-box">
+            <div class="hero-grid">
+                <div>
+                    <span class="inline-block px-3.5 py-1.5 rounded-full border border-blue-500/40 bg-blue-950/50 text-blue-300 text-xs font-bold tracking-wider mb-5">
+                        EN PROCESO DE SER DESARROLLADOR · RIWI
+                    </span>
 
-                <h1 class="text-4xl sm:text-6xl font-black leading-tight mb-5 text-white">
-                    Hola, soy <span class="gradient-text">Francisco.</span>
-                </h1>
+                    <h1 class="text-4xl sm:text-5xl font-black leading-tight mb-4 text-white">
+                        Hola, soy <span class="gradient-text">Francisco.</span>
+                    </h1>
 
-                <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-lg mb-8">
-                    Bueno en lo que hago y metiéndole toda la moral al desarrollo de software en <span class="text-white font-semibold">Riwi</span>. Me gusta construir soluciones digitales funcionales desde cero, tirando código limpio y aprendiendo algo nuevo todos los días. ¡Sisabe!
-                </p>
+                    <p class="text-slate-200 text-base leading-relaxed mb-6">
+                        Bueno en lo que hago y metiéndole toda la moral al desarrollo de software en <span class="text-white font-semibold">Riwi</span>. Me gusta construir soluciones digitales funcionales desde cero, tirando código limpio y aprendiendo algo nuevo todos los días. ¡Sisabe!
+                    </p>
 
-                <div class="flex flex-wrap gap-4 mb-8">
-                    <a href="#proyectos" class="glow-button px-6 py-3 rounded-full text-sm font-bold text-white">
-                        Ver proyectos ↗
-                    </a>
-                    <a href="#sobre-mi" class="px-6 py-3 rounded-full border border-blue-900/70 text-sm text-gray-200 hover:border-blue-500 transition font-semibold">
-                        Conocer más ↓
-                    </a>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <a href="#proyectos" class="glow-button px-5 py-2.5 rounded-full text-sm font-bold text-white">
+                            Ver proyectos ↗
+                        </a>
+                        <a href="#sobre-mi" class="outline-button px-5 py-2.5 rounded-full text-sm font-semibold text-white">
+                            Conocer más ↓
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-white">
+                        <a href="https://github.com/salgadofrancisco920?tab=repositories" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 underline">
+                            GitHub
+                        </a>
+                        <span class="text-blue-400">·</span>
+                        <button type="button" data-copy-email class="bg-transparent border-0 p-0 text-white hover:text-blue-400 underline cursor-pointer text-sm">
+                            <span class="copy-label">salgadofrancisco920@gmail.com</span>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-5 text-sm text-gray-400">
-                    <a href="https://github.com/salgadofrancisco920?tab=repositories" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 underline transition">
-                        GitHub
-                    </a>
-                    <span>·</span>
-                    <button type="button" data-copy-email class="hover:text-blue-400 underline transition cursor-pointer">
-                        <span class="copy-label">salgadofrancisco920@gmail.com</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="flex justify-center">
-                <div class="blue-card blue-border rounded-2xl p-4 max-w-sm w-full">
+                <div class="inner-card text-center">
                     <img
                         src="img/Fotodelballer.jpeg"
                         alt="Fotografía de Francisco"
-                        class="w-full h-80 object-cover rounded-xl mb-4"
+                        class="profile-thumb"
                     >
                     <p class="text-blue-400 text-xs font-bold tracking-wider mb-1">
                         CONSTRUYENDO CAMINO
                     </p>
-                    <p class="text-base font-semibold text-white">
+                    <p class="text-sm font-semibold text-white">
                         Centrado en dar el paso y dejar la huella.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="sobre-mi" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
-            <div class="grid md:grid-cols-12 gap-10 items-start">
-                <div class="md:col-span-7">
-                    <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">01 / SOBRE MÍ</p>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white mb-6">
+        <section id="sobre-mi" class="section-box">
+            <div class="about-grid">
+                <div class="flex flex-col justify-center">
+                    <p class="text-blue-400 font-bold tracking-wider text-xs mb-2">01 / SOBRE MÍ</p>
+                    <h2 class="text-3xl font-black text-white mb-4">
                         Un joven apasionado por el <span class="gradient-text">código.</span>
                     </h2>
-                    <div class="space-y-4 text-gray-300 text-base leading-relaxed">
+                    <div class="space-y-3 text-slate-200 text-sm sm:text-base leading-relaxed">
                         <p>
                             Soy Francisco, un chico sencillo, muy creativo y con buen sentido del humor. Estoy en pleno proceso de convertirme en desarrollador de software en <span class="text-white font-semibold">Riwi</span>. Me mueve entender cómo funcionan las cosas por dentro y transformar ideas en proyectos reales que sirvan de verdad.
                         </p>
@@ -129,23 +235,23 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-5 space-y-4">
-                    <article class="blue-card blue-border rounded-xl p-6">
+                <div class="flex flex-col gap-4 justify-between">
+                    <article class="inner-card">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-xs font-bold tracking-wider text-blue-400 uppercase">Formación Actual</span>
-                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-800/50">2026</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-950 text-white border border-blue-700/50">2026</span>
                         </div>
-                        <h3 class="text-lg font-bold text-white">Desarrollo de Software</h3>
-                        <p class="text-sm text-blue-300 font-medium mt-1">Riwi — Centro de Entrenamiento</p>
-                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                        <h3 class="text-base font-bold text-white">Desarrollo de Software</h3>
+                        <p class="text-xs text-blue-300 font-medium mt-1">Riwi — Centro de Entrenamiento</p>
+                        <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
                             Entrenamiento intensivo basado en proyectos reales: lógica de programación, desarrollo web, control de versiones con Git y trabajo en equipo bajo presión.
                         </p>
                     </article>
 
-                    <article class="blue-card blue-border rounded-xl p-6">
+                    <article class="inner-card">
                         <span class="text-xs font-bold tracking-wider text-blue-400 uppercase">Mentalidad</span>
-                        <h3 class="text-lg font-bold text-white mt-2">Código limpio y soluciones reales</h3>
-                        <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                        <h3 class="text-base font-bold text-white mt-1">Código limpio y soluciones reales</h3>
+                        <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
                             Me enfoco en escribir código ordenado, entendible y adaptable a cualquier pantalla, cuidando tanto la lógica como la experiencia de quien usa la plataforma.
                         </p>
                     </article>
@@ -153,108 +259,104 @@
             </div>
         </section>
 
-        <section id="habilidades" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
-            <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">02 / TECNOLOGÍAS</p>
-            <h2 class="text-3xl sm:text-4xl font-black text-white mb-10">
+        <section id="habilidades" class="section-box">
+            <p class="text-blue-400 font-bold tracking-wider text-xs mb-2">02 / TECNOLOGÍAS</p>
+            <h2 class="text-3xl font-black text-white mb-6">
                 Mi caja de <span class="gradient-text">herramientas.</span>
             </h2>
 
-            <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+            <ul class="skills-grid">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">HTML5</h3>
-                    <p class="text-gray-400 text-xs mt-1">Estructura semántica</p>
+                    <p class="text-slate-300 text-xs mt-1">Estructura semántica</p>
                 </li>
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">CSS3</h3>
-                    <p class="text-gray-400 text-xs mt-1">Diseño y layouts</p>
+                    <p class="text-slate-300 text-xs mt-1">Diseño y layouts</p>
                 </li>
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">Tailwind</h3>
-                    <p class="text-gray-400 text-xs mt-1">Estilos ágiles y modernos</p>
+                    <p class="text-slate-300 text-xs mt-1">Estilos ágiles y modernos</p>
                 </li>
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">JavaScript</h3>
-                    <p class="text-gray-400 text-xs mt-1">Lógica e interactividad</p>
+                    <p class="text-slate-300 text-xs mt-1">Lógica e interactividad</p>
                 </li>
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">Git & GitHub</h3>
-                    <p class="text-gray-400 text-xs mt-1">Control de versiones</p>
+                    <p class="text-slate-300 text-xs mt-1">Control de versiones</p>
                 </li>
-                <li class="blue-card blue-border rounded-xl p-5 hover:border-blue-500 transition">
+                <li class="inner-card hover:border-blue-400 transition">
                     <h3 class="font-bold text-base text-white">Linux</h3>
-                    <p class="text-gray-400 text-xs mt-1">Terminal y entorno</p>
+                    <p class="text-slate-300 text-xs mt-1">Terminal y entorno</p>
                 </li>
             </ul>
         </section>
 
-        <section id="proyectos" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
-            <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">03 / PORTAFOLIO</p>
-            <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">
+        <section id="proyectos" class="section-box">
+            <p class="text-blue-400 font-bold tracking-wider text-xs mb-2">03 / PORTAFOLIO</p>
+            <h2 class="text-3xl font-black text-white mb-2">
                 Proyectos <span class="gradient-text">construidos.</span>
             </h2>
-            <p class="text-gray-300 text-base max-w-2xl mb-10">
+            <p class="text-slate-200 text-sm sm:text-base mb-6">
                 Cada proyecto aquí es código real desplegado, pensado para resolver necesidades concretas con buena estructura y experiencia fluida.
             </p>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <article class="blue-card blue-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-blue-500 transition">
+            <div class="projects-grid">
+                <article class="inner-card flex flex-col justify-between hover:border-blue-400 transition">
                     <div>
                         <img
                             src="img/ruedarueda.png"
                             alt="Vista previa de Rueda Libre"
-                            class="w-full h-52 object-cover object-top border-b border-blue-950/60"
+                            class="project-thumb"
                         >
-                        <div class="p-6">
-                            <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · PLATAFORMA WEB</span>
-                            <h3 class="text-xl font-bold text-white mt-2">Rueda Libre</h3>
-                            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
-                                Plataforma completa para alquiler de bicicletas urbanas: catálogo de servicios, planes y tarifas claras, rutas nocturnas por la ciudad y flujo de reservas interactivo.
-                            </p>
-                            <ul class="flex flex-wrap gap-2 mt-4">
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">HTML5</li>
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">CSS3</li>
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">JavaScript</li>
-                            </ul>
-                        </div>
+                        <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · PLATAFORMA WEB</span>
+                        <h3 class="text-lg font-bold text-white mt-1">Rueda Libre</h3>
+                        <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Plataforma completa para alquiler de bicicletas urbanas: catálogo de servicios, planes y tarifas claras, rutas nocturnas por la ciudad y flujo de reservas interactivo.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mt-3 mb-4">
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">HTML5</li>
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">CSS3</li>
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">JavaScript</li>
+                        </ul>
                     </div>
 
-                    <div class="px-6 pb-6 pt-2 flex gap-3">
-                        <a href="https://salgadofrancisco920.github.io/Rueda-Libre/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2.5 rounded-xl text-sm font-bold text-white">
+                    <div class="flex gap-3 pt-2">
+                        <a href="https://salgadofrancisco920.github.io/Rueda-Libre/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2 rounded-lg text-xs sm:text-sm font-bold text-white">
                             Ver proyecto ↗
                         </a>
-                        <a href="https://github.com/salgadofrancisco920/Rueda-Libre.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-xl border border-blue-900/70 text-gray-200 hover:border-blue-500 text-sm font-semibold transition">
+                        <a href="https://github.com/salgadofrancisco920/Rueda-Libre.git" target="_blank" rel="noopener noreferrer" class="outline-button flex-1 text-center py-2 rounded-lg text-xs sm:text-sm font-semibold text-white">
                             Código GitHub
                         </a>
                     </div>
                 </article>
 
-                <article class="blue-card blue-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-blue-500 transition">
+                <article class="inner-card flex flex-col justify-between hover:border-blue-400 transition">
                     <div>
                         <img
                             src="img/sismo.png"
                             alt="Vista previa de SismoTwin"
-                            class="w-full h-52 object-cover object-top border-b border-blue-950/60"
+                            class="project-thumb"
                         >
-                        <div class="p-6">
-                            <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · COLABORATIVO · SIMULACIÓN & IA</span>
-                            <h3 class="text-xl font-bold text-white mt-2">SismoTwin</h3>
-                            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
-                                Aplicación web interactiva desarrollada en equipo que integra inteligencia artificial para simular escenarios sísmicos, analizar riesgos y visualizar datos clave de prevención en tiempo real.
-                            </p>
-                            <ul class="flex flex-wrap gap-2 mt-4">
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">HTML5</li>
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">CSS3</li>
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">JavaScript</li>
-                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">IA</li>
-                            </ul>
-                        </div>
+                        <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · COLABORATIVO · SIMULACIÓN & IA</span>
+                        <h3 class="text-lg font-bold text-white mt-1">SismoTwin</h3>
+                        <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Aplicación web interactiva desarrollada en equipo que integra inteligencia artificial para simular escenarios sísmicos, analizar riesgos y visualizar datos clave de prevención en tiempo real.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mt-3 mb-4">
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">HTML5</li>
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">CSS3</li>
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">JavaScript</li>
+                            <li class="px-2.5 py-0.5 rounded bg-blue-950/80 border border-blue-800/50 text-xs text-white">IA</li>
+                        </ul>
                     </div>
 
-                    <div class="px-6 pb-6 pt-2 flex gap-3">
-                        <a href="https://dahiana21.github.io/SismoTwin-Actividad-IA/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2.5 rounded-xl text-sm font-bold text-white">
+                    <div class="flex gap-3 pt-2">
+                        <a href="https://dahiana21.github.io/SismoTwin-Actividad-IA/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2 rounded-lg text-xs sm:text-sm font-bold text-white">
                             Ver proyecto ↗
                         </a>
-                        <a href="https://github.com/salgadofrancisco920/IA.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-xl border border-blue-900/70 text-gray-200 hover:border-blue-500 text-sm font-semibold transition">
+                        <a href="https://github.com/salgadofrancisco920/IA.git" target="_blank" rel="noopener noreferrer" class="outline-button flex-1 text-center py-2 rounded-lg text-xs sm:text-sm font-semibold text-white">
                             Código GitHub
                         </a>
                     </div>
@@ -262,64 +364,64 @@
             </div>
         </section>
 
-        <section id="contacto" class="max-w-7xl mx-auto px-6 py-20">
-            <div class="max-w-2xl mx-auto blue-card blue-border rounded-2xl p-6 sm:p-10">
-                <p class="text-blue-400 font-bold tracking-wider text-xs mb-3 text-center">04 / CONTACTO</p>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mb-3 text-center">
+        <section id="contacto" class="section-box mb-0">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-blue-400 font-bold tracking-wider text-xs mb-2 text-center">04 / CONTACTO</p>
+                <h2 class="text-3xl font-black text-white mb-2 text-center">
                     ¿Hablamos y armamos <span class="gradient-text">algo bueno?</span>
                 </h2>
-                <p class="text-gray-300 text-sm sm:text-base text-center mb-8">
+                <p class="text-slate-200 text-sm text-center mb-6">
                     Si tienes una idea, un proyecto colaborativo o quieres conectar en el mundo tech, escríbeme de una que aquí estamos firmes.
                 </p>
 
                 <form id="contact-form" action="https://formspree.io/f/xdegkpnl" method="POST" class="space-y-4">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="nombre" class="block text-xs font-semibold text-gray-300 mb-1.5">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+                            <label for="nombre" class="block text-xs font-semibold text-white mb-1">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-400">
                         </div>
                         <div>
-                            <label for="email" class="block text-xs font-semibold text-gray-300 mb-1.5">Correo electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@correo.com" class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+                            <label for="email" class="block text-xs font-semibold text-white mb-1">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@correo.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-400">
                         </div>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="telefono" class="block text-xs font-semibold text-gray-300 mb-1.5">Teléfono / WhatsApp (opcional)</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+                            <label for="telefono" class="block text-xs font-semibold text-white mb-1">Teléfono / WhatsApp (opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-400">
                         </div>
                         <div>
-                            <label for="empresa" class="block text-xs font-semibold text-gray-300 mb-1.5">Empresa o Proyecto (opcional)</label>
-                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa o iniciativa" class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+                            <label for="empresa" class="block text-xs font-semibold text-white mb-1">Empresa o Proyecto (opcional)</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa o iniciativa" class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-400">
                         </div>
                     </div>
 
                     <div>
-                        <label for="motivo" class="block text-xs font-semibold text-gray-300 mb-1.5">Motivo de contacto</label>
-                        <select id="motivo" name="motivo" required class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white focus:outline-none focus:border-blue-500 transition">
-                            <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="proyecto-web">Desarrollo de sitio o aplicación web</option>
-                            <option value="colaboracion">Proyecto colaborativo</option>
-                            <option value="oportunidad-laboral">Oportunidad laboral / Prácticas</option>
-                            <option value="consulta">Consulta general</option>
+                        <label for="motivo" class="block text-xs font-semibold text-white mb-1">Motivo de contacto</label>
+                        <select id="motivo" name="motivo" required class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white focus:outline-none focus:border-blue-400">
+                            <option value="" disabled selected class="bg-[#0A1124] text-slate-300">Selecciona una opción</option>
+                            <option value="proyecto-web" class="bg-[#0A1124] text-white">Desarrollo de sitio o aplicación web</option>
+                            <option value="colaboracion" class="bg-[#0A1124] text-white">Proyecto colaborativo</option>
+                            <option value="oportunidad-laboral" class="bg-[#0A1124] text-white">Oportunidad laboral / Prácticas</option>
+                            <option value="consulta" class="bg-[#0A1124] text-white">Consulta general</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="mensaje" class="block text-xs font-semibold text-gray-300 mb-1.5">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntame qué tienes en mente..." class="w-full px-4 py-2.5 rounded-xl bg-[#050811] border border-blue-900/70 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"></textarea>
+                        <label for="mensaje" class="block text-xs font-semibold text-white mb-1">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntame qué tienes en mente..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#050811] border border-blue-900/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-400"></textarea>
                     </div>
 
                     <button id="submit-btn" type="submit" class="glow-button w-full py-3 rounded-xl text-sm font-bold text-white cursor-pointer">
                         Enviar mensaje ↗
                     </button>
-                    <p id="form-status" class="hidden text-center text-sm font-semibold pt-1"></p>
+                    <p id="form-status" class="hidden text-center text-sm font-semibold pt-1 text-white"></p>
                 </form>
 
-                <div class="mt-6 pt-6 border-t border-blue-950/60 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+                <div class="mt-6 pt-5 border-t border-blue-950/70 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs sm:text-sm text-white">
                     <span>O copia mi correo con un clic:</span>
-                    <button type="button" data-copy-email class="px-3.5 py-1.5 rounded-full bg-[#050811] border border-blue-900/70 hover:border-blue-500 text-blue-400 font-semibold transition cursor-pointer">
+                    <button type="button" data-copy-email class="px-4 py-1.5 rounded-full bg-[#050811] border border-blue-800/80 hover:border-blue-400 text-white font-semibold transition cursor-pointer">
                         <span class="copy-label">salgadofrancisco920@gmail.com</span>
                     </button>
                 </div>
@@ -327,9 +429,9 @@
         </section>
     </main>
 
-    <footer class="border-t border-blue-950/60 py-8">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs sm:text-sm">
-            <p class="text-gray-400">© 2026 Francisco.dev · Todos los derechos reservados.</p>
+    <footer class="border-t border-blue-950/70 py-6 mt-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs sm:text-sm">
+            <p class="text-white">© 2026 Francisco.dev · Todos los derechos reservados.</p>
             <p class="gradient-text font-bold">Dispuesto a cambiar las reglas del juego ¡Sisabe!</p>
         </div>
     </footer>
