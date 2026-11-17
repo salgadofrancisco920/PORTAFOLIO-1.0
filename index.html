@@ -187,49 +187,79 @@
             </ul>
         </section>
 
-        <section id="proyectos">
-            <p>03 / PORTAFOLIO</p>
-            <h2>Proyectos construidos.</h2>
-            <p>
+        <section id="proyectos" class="max-w-7xl mx-auto px-6 py-20 border-b border-blue-950/50">
+            <p class="text-blue-400 font-bold tracking-wider text-xs mb-3">03 / PORTAFOLIO</p>
+            <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">
+                Proyectos <span class="gradient-text">construidos.</span>
+            </h2>
+            <p class="text-gray-300 text-base max-w-2xl mb-10">
                 Cada proyecto aquí es código real desplegado, pensado para resolver necesidades concretas con buena estructura y experiencia fluida.
             </p>
 
-            <article>
-                <img src="img/ruedarueda.png" alt="Vista previa de Rueda Libre">
-                <span>En línea · PLATAFORMA WEB</span>
-                <h3>Rueda Libre</h3>
-                <p>
-                    Plataforma completa para alquiler de bicicletas urbanas: catálogo de servicios, planes y tarifas claras, rutas nocturnas por la ciudad y flujo de reservas interactivo.
-                </p>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                </ul>
-                <div>
-                    <a href="https://salgadofrancisco920.github.io/rueda-libre/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
-                    <a href="https://github.com/salgadofrancisco920/rueda-libre.git" target="_blank" rel="noopener noreferrer">Código GitHub</a>
-                </div>
-            </article>
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="blue-card blue-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-blue-500 transition">
+                    <div>
+                        <img
+                            src="img/ruedarueda.png"
+                            alt="Vista previa de Rueda Libre"
+                            class="w-full h-52 object-cover object-top border-b border-blue-950/60"
+                        >
+                        <div class="p-6">
+                            <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · PLATAFORMA WEB</span>
+                            <h3 class="text-xl font-bold text-white mt-2">Rueda Libre</h3>
+                            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                                Plataforma completa para alquiler de bicicletas urbanas: catálogo de servicios, planes y tarifas claras, rutas nocturnas por la ciudad y flujo de reservas interactivo.
+                            </p>
+                            <ul class="flex flex-wrap gap-2 mt-4">
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">HTML5</li>
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">CSS3</li>
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <article>
-                <img src="img/sismo.png" alt="Vista previa de SismoTwin">
-                <span>En línea · Colaborativo · SIMULACIÓN & IA</span>
-                <h3>SismoTwin</h3>
-                <p>
-                    Aplicación web interactiva desarrollada en equipo que integra inteligencia artificial para simular escenarios sísmicos, analizar riesgos y visualizar datos clave de prevención en tiempo real.
-                </p>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>IA</li>
-                </ul>
-                <div>
-                    <a href="https://dahiana21.github.io/SismoTwin-Actividad-IA/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
-                    <a href="https://github.com/salgadofrancisco920/IA.git" target="_blank" rel="noopener noreferrer">Código GitHub</a>
-                </div>
-            </article>
+                    <div class="px-6 pb-6 pt-2 flex gap-3">
+                        <a href="https://salgadofrancisco920.github.io/Rueda-Libre/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2.5 rounded-xl text-sm font-bold text-white">
+                            Ver proyecto ↗
+                        </a>
+                        <a href="https://github.com/salgadofrancisco920/Rueda-Libre.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-xl border border-blue-900/70 text-gray-200 hover:border-blue-500 text-sm font-semibold transition">
+                            Código GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blue-card blue-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-blue-500 transition">
+                    <div>
+                        <img
+                            src="img/sismo.png"
+                            alt="Vista previa de SismoTwin"
+                            class="w-full h-52 object-cover object-top border-b border-blue-950/60"
+                        >
+                        <div class="p-6">
+                            <span class="text-blue-400 text-xs font-bold tracking-wider">EN LÍNEA · COLABORATIVO · SIMULACIÓN & IA</span>
+                            <h3 class="text-xl font-bold text-white mt-2">SismoTwin</h3>
+                            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                                Aplicación web interactiva desarrollada en equipo que integra inteligencia artificial para simular escenarios sísmicos, analizar riesgos y visualizar datos clave de prevención en tiempo real.
+                            </p>
+                            <ul class="flex flex-wrap gap-2 mt-4">
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">HTML5</li>
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">CSS3</li>
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">JavaScript</li>
+                                <li class="px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/40 text-xs font-medium text-blue-300">IA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 flex gap-3">
+                        <a href="https://dahiana21.github.io/SismoTwin-Actividad-IA/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-2.5 rounded-xl text-sm font-bold text-white">
+                            Ver proyecto ↗
+                        </a>
+                        <a href="https://github.com/salgadofrancisco920/IA.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-xl border border-blue-900/70 text-gray-200 hover:border-blue-500 text-sm font-semibold transition">
+                            Código GitHub
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="contacto">

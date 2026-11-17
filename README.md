@@ -36,4 +36,9 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
    * Estructuracion de `#sobre-mi` en dos columnas (`grid md:grid-cols-12`), combinando la biografia personal a la izquierda con tarjetas informativas de formacion actual en Riwi (2026) y mentalidad de desarrollo a la derecha.
    * Organizacion de `#habilidades` mediante una cuadricula responsiva (`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6`) con tarjetas limpias para cada tecnologia y efecto de resaltado en el borde al pasar el cursor.
 
+8. **Diseno de la seccion Proyectos (Fase visual 4):**
+   * Estructuracion de `#proyectos` en dos columnas (`grid md:grid-cols-2`) con tarjetas alineadas (`blue-card` y `blue-border`).
+   * Ajuste de vistas previas con altura uniforme (`h-52 object-cover object-top`), etiquetas de tecnologias utilizadas y botones de accion (`Ver proyecto` y `Codigo GitHub`).
+   * Actualizacion de enlaces del proyecto **Rueda Libre** hacia el repositorio `Rueda-Libre`.
+
 ---
