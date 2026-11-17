@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisco.dev | Desarrollador de Software</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF7A00'/%3E%3Cstop offset='50%25' stop-color='%23FF3D32'/%3E%3Cstop offset='100%25' stop-color='%23FF176B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23100910'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='900' font-size='32' fill='url(%23g)'%3EF.%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(ellipse at 80% 10%, rgba(29, 78, 216, 0.22), transparent 40%),
+                radial-gradient(ellipse at 10% 60%, rgba(30, 58, 138, 0.20), transparent 40%),
+                #050811;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60A5FA, #2563EB, #1E40AF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .blue-border {
+            border: 1px solid rgba(59, 130, 246, 0.28);
+        }
+        .blue-card {
+            background-color: #0A1124;
+        }
+        .glow-button {
+            background: linear-gradient(100deg, #2563EB, #1D4ED8, #1E3A8A);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glow-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(37, 99, 235, 0.45);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.28), transparent 70%);
+        }
+    </style>
 </head>
-<body>
+<body class="text-white antialiased selection:bg-blue-700 selection:text-white">
 
-    <!-- NAVEGACIÓN -->
-    <header>
-        <nav>
-            <a href="#inicio">Francisco.dev</a>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#050811]/85 backdrop-blur-xl border-b border-blue-950/60">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-black tracking-tight text-white">
+                Francisco<span class="gradient-text">.dev</span>
+            </a>
+
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <li><a href="#inicio" class="hover:text-blue-400 transition">Inicio</a></li>
+                <li><a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre mí</a></li>
+                <li><a href="#habilidades" class="hover:text-blue-400 transition">Habilidades</a></li>
+                <li><a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a></li>
+                <li><a href="#contacto" class="hover:text-blue-400 transition">Contacto</a></li>
             </ul>
-            <a href="#contacto">Hablemos ↗</a>
+
+            <a href="#contacto" class="glow-button px-5 py-2.5 rounded-full text-sm font-bold text-white">
+                Hablemos ↗
+            </a>
         </nav>
     </header>
 
     <main>
-        <!-- SECCIÓN HERO / PRESENTACIÓN -->
         <section id="inicio">
             <span>EN PROCESO DE SER DESARROLLADOR · RIWI</span>
             <h1>Hola, soy Francisco.</h1>
@@ -50,7 +89,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN SOBRE MÍ -->
         <section id="sobre-mi">
             <p>01 / SOBRE MÍ</p>
             <h2>Un joven apasionado por el código.</h2>
@@ -79,7 +117,6 @@
             </article>
         </section>
 
-        <!-- SECCIÓN HABILIDADES -->
         <section id="habilidades">
             <p>02 / TECNOLOGÍAS</p>
             <h2>Mi caja de herramientas.</h2>
@@ -111,7 +148,6 @@
             </ul>
         </section>
 
-        <!-- SECCIÓN PROYECTOS -->
         <section id="proyectos">
             <p>03 / PORTAFOLIO</p>
             <h2>Proyectos construidos.</h2>
@@ -119,7 +155,6 @@
                 Cada proyecto aquí es código real desplegado, pensado para resolver necesidades concretas con buena estructura y experiencia fluida.
             </p>
 
-            <!-- Proyecto 1: Rueda Libre -->
             <article>
                 <img src="img/ruedarueda.png" alt="Vista previa de Rueda Libre">
                 <span>En línea · PLATAFORMA WEB</span>
@@ -138,7 +173,6 @@
                 </div>
             </article>
 
-            <!-- Proyecto 2: SismoTwin -->
             <article>
                 <img src="img/sismo.png" alt="Vista previa de SismoTwin">
                 <span>En línea · Colaborativo · SIMULACIÓN & IA</span>
@@ -159,7 +193,6 @@
             </article>
         </section>
 
-        <!-- SECCIÓN CONTACTO -->
         <section id="contacto">
             <p>04 / CONTACTO</p>
             <h2>¿Hablamos y armamos algo bueno?</h2>
@@ -167,7 +200,6 @@
                 Si tienes una idea, un proyecto colaborativo o quieres conectar en el mundo tech, escríbeme de una que aquí estamos firmes.
             </p>
 
-            <!-- Formulario de contacto -->
             <form id="contact-form" action="https://formspree.io/f/xdegkpnl" method="POST">
                 <div>
                     <label for="nombre">Nombre completo</label>
@@ -203,7 +235,6 @@
                 <p id="form-status"></p>
             </form>
 
-            <!-- Botón rápido para copiar correo -->
             <div>
                 <span>O copia mi correo con un clic:</span>
                 <button type="button" data-copy-email>
@@ -213,7 +244,6 @@
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>© 2026 Francisco.dev · Todos los derechos reservados.</p>
         <p>Dispuesto a cambiar las reglas del juego ¡Sisabe!</p>

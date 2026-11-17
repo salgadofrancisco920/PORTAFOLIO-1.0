@@ -1,6 +1,6 @@
 # Francisco.dev - Portafolio Personal
 
-Portafolio web personal desarrollado durante mi formacion como desarrollador de software en **Riwi** (Medellin, Colombia). Este repositorio documenta la etapa inicial del proyecto enfocada en la estructura semantica pura en **HTML5** antes de aplicar estilos.
+Portafolio web personal desarrollado durante mi formacion como desarrollador de software en **Riwi** (Medellin, Colombia). Este repositorio documenta la construccion progresiva del proyecto: desde la estructura semantica pura en **HTML5** hasta la incorporacion incremental de estilos con **Tailwind CSS**.
 
 ---
 
@@ -9,7 +9,6 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
 1. **Estructura semantica en HTML5:**
    * Creacion de `index.html` con etiquetas nativas (`header`, `nav`, `main`, `section`, `article`, `footer`).
    * Navegacion interna por anclas (`#inicio`, `#sobre-mi`, `#habilidades`, `#proyectos`, `#contacto`).
-   * Favicon SVG embebido directamente en el documento.
 
 2. **Contenido e identidad:**
    * Integracion de informacion personal, perfil como coder en Riwi y enlaces a GitHub y correo (`salgadofrancisco920@gmail.com`).
@@ -22,6 +21,11 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
 4. **Formulario de contacto:**
    * Conexion con **Formspree** (`https://formspree.io/f/xdegkpnl`).
    * Campos incluidos: nombre completo, correo electronico, telefono/WhatsApp, empresa o proyecto, selector de motivo de contacto y mensaje.
+
+5. **Configuracion de Tailwind CSS y barra de navegacion (Fase visual 1):**
+   * Integracion de Tailwind CSS mediante CDN y configuracion de la tipografia **Inter**.
+   * Definicion de la paleta de colores oscura con tonos azules (`#050811` para el fondo principal, `#0A1124` para tarjetas y degradados en azul cielo, azul rey y azul marino).
+   * Estilizado de la barra de navegacion fija (`header`) con efecto desenfoque (`backdrop-blur`), enlaces de navegacion responsivos y boton principal con brillo azul.
 
 ---
 
