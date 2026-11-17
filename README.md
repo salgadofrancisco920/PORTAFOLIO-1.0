@@ -1,6 +1,6 @@
 # Francisco.dev - Portafolio Personal
 
-Portafolio web personal desarrollado durante mi formacion como desarrollador de software en **Riwi** (Medellin, Colombia). Este repositorio documenta la construccion progresiva del proyecto: desde la estructura semantica pura en **HTML5** hasta la incorporacion incremental de estilos con **Tailwind CSS**.
+Portafolio web personal desarrollado durante mi formacion como desarrollador de software en **Riwi** (Medellin, Colombia). Este repositorio documenta la construccion progresiva del proyecto: desde la estructura semantica pura en **HTML5** hasta la incorporacion incremental de estilos con **Tailwind CSS** e interactividad con **JavaScript**.
 
 ---
 
@@ -40,5 +40,10 @@ Portafolio web personal desarrollado durante mi formacion como desarrollador de 
    * Estructuracion de `#proyectos` en dos columnas (`grid md:grid-cols-2`) con tarjetas alineadas (`blue-card` y `blue-border`).
    * Ajuste de vistas previas con altura uniforme (`h-52 object-cover object-top`), etiquetas de tecnologias utilizadas y botones de accion (`Ver proyecto` y `Codigo GitHub`).
    * Actualizacion de enlaces del proyecto **Rueda Libre** hacia el repositorio `Rueda-Libre`.
+
+9. **Diseno de Contacto, Footer e interactividad en JavaScript (Fase visual 5):**
+   * Estilizado del contenedor y campos del formulario en `#contacto` con bordes y enfoque en tonos azules, ademas de boton rapido para copiar correo.
+   * Diseno del pie de pagina (`footer`) con derechos de autor y lema personal.
+   * Implementacion de JavaScript para copiar el correo al portapapeles con confirmacion visual y envio asincrono del formulario mediante `fetch` hacia **Formspree**.
 
 ---
